@@ -1,5 +1,3 @@
-import 'dart:ui';
-
 import 'package:datalist_convertpdf/basic_pdf_api.dart';
 import 'package:datalist_convertpdf/image_pdf_api.dart';
 import 'package:datalist_convertpdf/paragraph_pdf.dart';
@@ -7,7 +5,7 @@ import 'package:datalist_convertpdf/save_and_openpdf.dart';
 import 'package:datalist_convertpdf/table_pdf_api.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() {  
   runApp(const MyApp());
 }
 
@@ -55,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: const Text('Basic PDF')),
             ElevatedButton(
-                onPressed: () async {
+                onPressed: () async { 
                   final paragraphPdf =
                       await ParagraphPdfApi.generateParagraphPdf();
                   SaveAndOpenDocument.openPdf(paragraphPdf);
